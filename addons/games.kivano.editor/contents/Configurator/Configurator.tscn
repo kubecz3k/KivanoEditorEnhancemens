@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/games.kivano.editor/contents/Configurator/Configurator.gd" type="Script" id=1]
+
+[node name="PopupMenu" type="PopupMenu"]
+
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+items = [  ]
+script = ExtResource( 1 )
+
+

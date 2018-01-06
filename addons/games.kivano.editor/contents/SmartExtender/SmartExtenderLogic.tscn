@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/games.kivano.editor/contents/SmartExtender/SmartExtenderLogic.gd" type="Script" id=1]
+[ext_resource path="res://addons/games.kivano.editor/contents/SmartExtender/assets/normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/games.kivano.editor/contents/SmartExtender/assets/over.png" type="Texture" id=3]
+[ext_resource path="res://addons/games.kivano.editor/contents/SmartExtender/assets/disabled.png" type="Texture" id=4]
+[ext_resource path="res://addons/games.kivano.editor/contents/SmartExtender/FileDialog/FileDialog.tscn" type="PackedScene" id=5]
+
+[node name="AutoExtenderLogic" type="Control"]
+
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 24, 23 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Extend Selected Node"
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Hint", "Margin", "Material", "Rect", "Size Flags" ]
+
+[node name="Button" type="TextureButton" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 4 )
+expand = true
+
+[node name="FileDialog" parent="." instance=ExtResource( 5 )]
+
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 81.0
+margin_top = 77.0
+margin_right = 952.0
+margin_bottom = 647.0
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[connection signal="confirmed" from="FileDialog" to="." method="_on_FileDialog_confirmed"]
+
+

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="KIV_PATH_2_BASE_SCENE" type="PackedScene" id=1]
+
+[node name="KIV_NEW_NODE_NAME" instance=ExtResource( 1 )]

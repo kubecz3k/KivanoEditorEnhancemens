@@ -1,0 +1,17 @@
+#Project files
+Tests/
+default_env.tres
+icon.png
+project.godot
+/addons/games.kivano.group_desc.dat
+/addons/games.kivano.raw_groups.dat
+
+
+# Godot-specific ignores
+.import/
+export.cfg
+.fscache
+
+# System/tool-specific ignores
+.directory
+*~

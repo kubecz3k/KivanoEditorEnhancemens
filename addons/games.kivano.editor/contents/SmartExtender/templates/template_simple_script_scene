@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="KIV_PATH_2_SCRIPT" type="Script" id=1]
+
+[node name="KIV_NEW_NODE_NAME" type="KIV_NODE_TYPE"]
+
+script = ExtResource( 1 )
+
+

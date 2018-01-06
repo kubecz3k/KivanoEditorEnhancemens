@@ -1,0 +1,9 @@
+[gd_scene format=2]
+[ext_resource path="res://addons/games.kivano.editor/contents/TemplateSwitcher/assets/2d_template_holder.png" type="Texture" id=1]
+[node name="2DTemplateHolder" type="Node2D"]
+
+__meta__ = {
+"_editor_icon": ExtResource( 1 )
+}
+
+

@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/games.kivano.editor/contents/GroupManager/GroupInfoWin/AddMethodPopup/AddMethodPopup.gd" type="Script" id=1]
+
+
+[node name="AddMethodPopup" type="WindowDialog"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 193.0
+margin_top = 75.0
+margin_right = -192.0
+margin_bottom = -62.0
+popup_exclusive = false
+window_title = "Define new group method"
+script = ExtResource( 1 )
+
+[node name="methodName" type="TextEdit" parent="."]
+
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 7.0
+margin_top = 15.0
+margin_right = 380.0
+margin_bottom = 44.0
+show_line_numbers = false
+highlight_all_occurrences = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+
+[node name="methodParams" type="TextEdit" parent="."]
+
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 7.0
+margin_top = 59.0
+margin_right = 380.0
+margin_bottom = 96.0
+show_line_numbers = false
+highlight_all_occurrences = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+
+[node name="titleMethodName" type="Label" parent="."]
+
+focus_ignore_mouse = true
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 0
+margin_left = 0.0
+margin_top = 3.0
+margin_right = 91.0
+margin_bottom = 17.0
+text = "Method Name"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="titleParams" type="Label" parent="."]
+
+hint/tooltip = "Only number of paramaters will be taken into account during validation"
+focus_ignore_mouse = true
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 0
+margin_left = 0.0
+margin_top = 44.0
+margin_right = 91.0
+margin_bottom = 58.0
+text = "Parameters (separate with comma)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SaveBtn" type="Button" parent="."]
+
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 210.0
+margin_top = 100.0
+margin_right = 278.0
+margin_bottom = 132.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Save"
+flat = false
+
+[node name="cancelBtn" type="Button" parent="."]
+
+focus_ignore_mouse = false
+focus_stop_mouse = true
+size_flags_horizontal = 2
+size_flags_vertical = 2
+margin_left = 120.0
+margin_top = 100.0
+margin_right = 188.0
+margin_bottom = 132.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Cancel"
+flat = false
+
+[connection signal="pressed"  from="SaveBtn"  to="." method="_on_SaveBtn_pressed" binds=[  ]]
+
+[connection signal="pressed"  from="cancelBtn"  to="." method="_on_cancelBtn_pressed" binds=[  ]]
