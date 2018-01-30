@@ -32,8 +32,8 @@ func _notification(what):
 var templateHolderNode;
 func postInit():
 	var parent = get_parent();
-	var owner = parent.get_owner();
-	if(owner==null): owner = parent;
+	var lowner = parent.get_owner();
+	if(lowner==null): lowner = parent;
 	
 	var templateFilePath = "";
 	if(parent is Spatial):
@@ -46,7 +46,7 @@ func postInit():
 	#
 	templateHolderNode = load(templateFilePath).instance();
 	parent.add_child(templateHolderNode);
-	templateHolderNode.set_owner(owner);
+	templateHolderNode.set_owner(lowner);
 	templateHolderNode.set_scene_instance_load_placeholder(true); 
 	
 	var children = get_children();
@@ -57,10 +57,6 @@ func postInit():
 	#
 	queue_free();
 
-	
-	
-	
-	
 ##################################################################################
 #########                       Getters and Setters                      #########
 ##################################################################################
