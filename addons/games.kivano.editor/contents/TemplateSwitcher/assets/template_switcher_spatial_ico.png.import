@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/template_switcher_spatial_ico.png-879d589f2fece34899ffcb37b0f9da90.stex"
 
+[deps]
+
+source_md5="91ef3c2a8a4ba3248642e510e3607ca7"
+
 [params]
 
 compress/mode=0

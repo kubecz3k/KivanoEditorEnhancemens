@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/ok_ico.png-6e9aef183b4083b6d664f0a381568e26.stex"
 
+[deps]
+
+source_md5="236da91bc72820c9111bd74ea3cf88b9"
+
 [params]
 
 compress/mode=0
