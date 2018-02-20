@@ -11,54 +11,131 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -255.0
 margin_top = -169.0
-margin_right = 254.0
-margin_bottom = 300.0
+margin_right = 250.0
+margin_bottom = 239.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 popup_exclusive = false
 window_title = "Group"
-resizable = false
+resizable = true
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 path2GroupManagerRoot = NodePath("..")
+description_ = NodePath("1/1/description")
+members_ = NodePath("1/3/members")
+titleDesc_ = NodePath("1/1/1/titleDesc")
+methodList_ = NodePath("1/2/methodList")
+AddMethodPopup_ = NodePath("AddMethodPopup")
 
-[node name="titleDesc" type="Label" parent="."]
+[node name="1" type="VBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="1" type="VBoxContainer" parent="1" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 505.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="1" type="HBoxContainer" parent="1/1" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 505.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="titleDesc" type="Label" parent="1/1/1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1.0
-margin_top = 13.0
-margin_right = 67.0
-margin_bottom = 27.0
+margin_right = 375.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-size_flags_horizontal = 2
-size_flags_vertical = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 text = "Description:"
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="description" type="TextEdit" parent="."]
+[node name="editDescriptionBtn" type="Button" parent="1/1/1" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
+anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 4.0
-margin_top = 30.0
-margin_right = 6.0
-margin_bottom = 155.0
+margin_left = 379.0
+margin_right = 505.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Edit description"
+flat = false
+align = 1
+
+[node name="description" type="TextEdit" parent="1/1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 505.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
 text = ""
 readonly = true
 highlight_current_line = false
@@ -69,134 +146,247 @@ override_selected_font_color = false
 context_menu_enabled = true
 smooth_scrolling = false
 v_scroll_speed = 80.0
+hiding_enabled = 0
+wrap_lines = false
 caret_block_mode = false
 caret_blink = false
 caret_blink_speed = 0.65
+caret_moving_by_right_click = true
 
-[node name="titleMethods" type="Label" parent="."]
+[node name="2" type="VBoxContainer" parent="1" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 137.0
+margin_right = 505.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="1" type="HBoxContainer" parent="1/2" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 505.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="titleMethods" type="Label" parent="1/2/1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 163.0
 margin_right = 121.0
-margin_bottom = 177.0
+margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
+size_flags_stretch_ratio = 5.0
 text = "Required Methods:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="methodList" type="ItemList" parent="."]
+[node name="1" type="HBoxContainer" parent="1/2/1" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
+anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 2.0
-margin_top = 180.0
-margin_right = 5.0
-margin_bottom = 293.0
+margin_left = 421.0
+margin_right = 505.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-items = [  ]
-select_mode = 0
-icon_mode = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
 
-[node name="editDescriptionBtn" type="Button" parent="."]
+[node name="addMethodBtn" type="Button" parent="1/2/1/1" index="0"]
 
-anchor_left = 1.0
+anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
+anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -112.0
-margin_top = 10.0
-margin_bottom = 30.0
+margin_right = 40.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Edit description"
-flat = false
-
-[node name="addMethodBtn" type="Button" parent="."]
-
-anchor_left = 1.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 0.0
-margin_left = -30.0
-margin_top = 160.0
-margin_right = -10.0
-margin_bottom = 180.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "+"
 flat = false
+align = 1
 
-[node name="removeMethod" type="Button" parent="."]
+[node name="removeMethod" type="Button" parent="1/2/1/1" index="1"]
 
-anchor_left = 1.0
+anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
+anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -57.0
-margin_top = 160.0
-margin_right = -40.0
-margin_bottom = 180.0
+margin_left = 44.0
+margin_right = 84.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "-"
 flat = false
+align = 1
 
-[node name="saveBtn" type="Button" parent="."]
+[node name="methodList" type="ItemList" parent="1/2" index="1"]
 
-anchor_left = 1.0
+anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
+anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -98.0
-margin_top = 297.0
-margin_bottom = 317.0
+margin_top = 29.0
+margin_right = 505.0
+margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+rect_clip_content = true
+focus_mode = 2
 mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+items = [  ]
+select_mode = 0
+icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
+
+[node name="3" type="VBoxContainer" parent="1" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 274.0
+margin_right = 505.0
+margin_bottom = 408.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="1" type="HBoxContainer" parent="1/3" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 505.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+
+[node name="titleMembers" type="Label" parent="1/3/1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 375.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+text = "Member scenes:"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="saveBtn" type="Button" parent="1/3/1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 379.0
+margin_right = 505.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "Save Changes"
 flat = false
+align = 1
 
-[node name="AddMethodPopup" parent="." instance=ExtResource( 2 )]
+[node name="members" type="ItemList" parent="1/3" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 505.0
+margin_bottom = 134.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+items = [  ]
+select_mode = 0
+icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
+
+[node name="AddMethodPopup" parent="." index="2" instance=ExtResource( 2 )]
 
 visible = false
 anchor_left = 1.0
@@ -204,56 +394,20 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 resizable = false
 
-[node name="titleMembers" type="Label" parent="."]
+[connection signal="pressed" from="1/1/1/editDescriptionBtn" to="." method="_on_editDescriptionBtn_pressed"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 300.0
-margin_right = 121.0
-margin_bottom = 314.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-size_flags_horizontal = 2
-size_flags_vertical = 0
-text = "Member scenes:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+[connection signal="pressed" from="1/2/1/1/addMethodBtn" to="." method="_on_addMethodBtn_pressed"]
 
-[node name="members" type="ItemList" parent="."]
+[connection signal="pressed" from="1/2/1/1/removeMethod" to="." method="_on_removeMethod_pressed"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 315.0
-margin_right = 510.0
-margin_bottom = 467.0
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-items = [  ]
-select_mode = 0
-icon_mode = 1
+[connection signal="pressed" from="1/3/1/saveBtn" to="." method="_on_saveBtn_pressed"]
 
-[connection signal="pressed" from="editDescriptionBtn" to="." method="_on_editDescriptionBtn_pressed"]
-
-[connection signal="pressed" from="addMethodBtn" to="." method="_on_addMethodBtn_pressed"]
-
-[connection signal="pressed" from="removeMethod" to="." method="_on_removeMethod_pressed"]
-
-[connection signal="pressed" from="saveBtn" to="." method="_on_saveBtn_pressed"]
+[connection signal="item_activated" from="1/3/members" to="." method="_on_members_item_activated"]
 
 [connection signal="onMethodSave" from="AddMethodPopup" to="." method="_on_AddMethodPopup_onMethodSave"]
-
-[connection signal="item_activated" from="members" to="." method="_on_members_item_activated"]
 
 

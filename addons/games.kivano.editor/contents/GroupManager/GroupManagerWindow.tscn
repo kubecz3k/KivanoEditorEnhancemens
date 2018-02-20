@@ -3,20 +3,22 @@
 [ext_resource path="res://addons/games.kivano.editor/contents/GroupManager/GroupManagerWindow.gd" type="Script" id=1]
 [ext_resource path="res://addons/games.kivano.editor/contents/GroupManager/GroupInfoWin/GroupInfoWin.tscn" type="PackedScene" id=2]
 
-[node name="Group Manager" type="Control"]
+[node name="Group Manager" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -70.0
+margin_bottom = -12.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 script = ExtResource( 1 )
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -25,8 +27,8 @@ anchor_bottom = 0.0
 margin_right = 112.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
 text = "Groups"
@@ -34,7 +36,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="GroupList" type="ItemList" parent="."]
+[node name="GroupList" type="ItemList" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -42,22 +44,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 items = [  ]
 select_mode = 0
 icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
 
-[node name="GroupDesc" parent="." instance=ExtResource( 2 )]
+[node name="GroupDesc" parent="." index="2" instance=ExtResource( 2 )]
 
 visible = false
 margin_left = -285.0
 margin_top = -235.0
-margin_right = 224.0
-margin_bottom = 234.0
+margin_right = 342.0
+margin_bottom = 288.0
 
-[node name="RefreshBtn" type="Button" parent="."]
+[node name="RefreshBtn" type="Button" parent="." index="3"]
 
 anchor_left = 1.0
 anchor_top = 0.0
@@ -66,8 +72,9 @@ anchor_bottom = 0.0
 margin_left = -60.0
 margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 toggle_mode = false
@@ -76,10 +83,10 @@ shortcut = null
 group = null
 text = "Refresh"
 flat = false
+align = 1
 
-[node name="debug" type="RichTextLabel" parent="."]
+[node name="debug" type="RichTextLabel" parent="." index="4"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -89,13 +96,21 @@ margin_top = 65.0
 margin_right = 348.0
 margin_bottom = 240.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 bbcode_enabled = true
 bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
 override_selected_font_color = false
 
 [connection signal="item_activated" from="GroupList" to="." method="_on_GroupList_item_activated"]
